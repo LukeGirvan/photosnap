@@ -1,0 +1,195 @@
+@use 'mixinstyles.scss' as mixin;
+
+
+@media (min-width:1200px) {
+   .chart-holder{
+    width: 100%;
+    min-height: 700px;
+    @include mixin.center-flex-column();
+    align-items: center;
+    .compare{
+        font-size: 2.4rem
+    }
+    .chart{
+        width: 70%;
+        margin-bottom: 10rem;
+        .top-div,.feature-div{
+            position: relative;
+            @include mixin.flex-row();
+            justify-content: space-between;
+            .the-features{
+                width: 30%;
+                @include mixin.flex-row();
+                // justify-content: center;
+            }
+            .plans-holder{
+                width: 60%;
+                @include mixin.flex-row();
+                justify-content: space-evenly;
+                .check-holder{
+                    width: 27px;
+                    @include mixin.center-flex-column();
+                    align-items: flex-start;
+                    img{
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+                .check-holder.hide{
+                    opacity: 0;
+                }
+                
+            }
+            .plans-holder.hide{
+                display: none;
+             }
+        }
+        .top-div::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            top: 100%;
+        }
+        .feature-div::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: rgb(129, 129, 129);
+            top: 100%;
+        }
+    }
+   } 
+}
+
+
+@media (min-width:769px) and (max-width:1200px){
+    .chart-holder{
+     width: 100%;
+     min-height: 700px;
+     @include mixin.center-flex-column();
+     align-items: center;
+     .compare{
+         font-size: 2.4rem
+     }
+     .chart{
+         width: 70%;
+         margin-bottom: 10rem;
+         .top-div,.feature-div{
+             position: relative;
+             @include mixin.flex-row();
+             justify-content: space-between;
+             .the-features{
+                 width: 35%;
+                 @include mixin.flex-row();
+                 // justify-content: center;
+             }
+             .plans-holder{
+                 width: 60%;
+                 @include mixin.flex-row();
+                 justify-content: space-evenly;
+                 .check-holder{
+                     width: 27px;
+                     @include mixin.center-flex-column();
+                     align-items: flex-start;
+                     img{
+                         height: 16px;
+                         width: 16px;
+                     }
+                 }
+                 .check-holder.hide{
+                     opacity: 0;
+                 }
+                 
+             }
+             .plans-holder.hide{
+                display: none;
+             }
+         }
+         .top-div::after{
+             content: '';
+             position: absolute;
+             width: 100%;
+             height: 2px;
+             background-color: black;
+             top: 100%;
+         }
+         .feature-div::after{
+             content: '';
+             position: absolute;
+             width: 100%;
+             height: 1px;
+             background-color: rgb(129, 129, 129);
+             top: 100%;
+         }
+     }
+    } 
+ }
+
+
+
+ @media (max-width:769px) {
+    .chart-holder{
+     width: 100%;
+     min-height: 700px;
+     @include mixin.center-flex-column();
+     align-items: center;
+     .compare{
+         font-size: 2.4rem
+     }
+     .chart{
+         width: 70%;
+         margin-bottom: 10rem;
+         .top-div,.feature-div{
+             position: relative;
+             @include mixin.center-flex-column();
+             justify-content: space-between;
+             .the-features{
+                 width: 100%;
+                 @include mixin.flex-row();
+                 justify-content: flex-start;
+             }
+             .plans-holder{
+                 width: 100%;
+                 @include mixin.flex-row();
+                 justify-content: space-between;
+                 align-items: flex-start;
+                 .check-holder{
+                     width: 27px;
+                     @include mixin.center-flex-column();
+                     align-items: flex-start;
+                     img{
+                         height: 16px;
+                         width: 16px;
+                     }
+                 }
+                 .check-holder.hide{
+                     opacity: 0;
+                 }
+                 
+             }
+             .plans-holder.hide{
+                display: none;
+             }
+         }
+         .top-div::after{
+             content: '';
+             position: absolute;
+             width: 100%;
+             height: 2px;
+             background-color: black;
+             top: 100%;
+         }
+         .feature-div::after{
+             content: '';
+             position: absolute;
+             width: 100%;
+             height: 1px;
+             background-color: rgb(129, 129, 129);
+             top: 110%;
+         }
+     }
+    } 
+ }

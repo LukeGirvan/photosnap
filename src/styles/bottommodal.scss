@@ -1,0 +1,132 @@
+@use 'mixinstyles.scss' as mixin;
+
+@media (min-width:1200px) {
+    .bottom-modal{
+        width: 100%;
+        min-height: 450px;
+        @include mixin.flex-row();
+        justify-content: center;
+        align-items: center;
+        .eighty-width-text-holder{
+            width: 80%;
+            @include mixin.flex-row();
+            justify-content: space-between;
+            .big-text-left{
+                max-width:50%;
+    
+                font-size: 3rem;
+                font-weight: bold;
+                color: white;
+            }
+            .invite-link-holder{
+                @include mixin.center-flex-row();
+                justify-content: flex-end;
+                align-items:center;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                .arrow{
+                    filter: brightness(1) invert(1);
+                    margin-left: 1rem;
+                    max-width: 60px;
+                    max-height: 20px;
+                }
+            }
+        }
+    }
+    .bottom-modal.flower-image{
+        background: url('/assets/shared/desktop/bg-beta.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+
+        background-position: 50% center;
+    }
+}
+@media (min-width:769px) and (max-width:1200px)  {
+    .bottom-modal{
+        width: 100%;
+        min-height: 450px;
+        @include mixin.flex-row();
+        justify-content: center;
+        align-items: center;
+        .eighty-width-text-holder{
+            width: 80%;
+            @include mixin.flex-row();
+            justify-content: space-between;
+            .big-text-left{
+                max-width: 50%;
+    
+                font-size: 3rem;
+                font-weight: bold;
+                color: white;
+            }
+            .invite-link-holder{
+                @include mixin.center-flex-row();
+                justify-content: flex-end;
+                align-items:center;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                .arrow{
+                    filter: brightness(1) invert(1);
+                    margin-left: 1rem;
+                    max-width: 60px;
+                    max-height: 20px;
+                }
+            }
+        }
+    }
+    .bottom-modal.flower-image{
+        background: url('/assets/shared/tablet/bg-beta.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+
+        background-position: 50% center;
+    }
+}
+@media (max-width:769px)  {
+    .bottom-modal{
+        width: 100%;
+        min-height: 450px;
+        @include mixin.center-flex-column();
+        justify-content: center;
+        align-items: center;
+        .eighty-width-text-holder{
+            gap:2rem;
+            width: 80%;
+            @include mixin.center-flex-column();
+            align-items: flex-start;
+            justify-content: space-between;
+            .big-text-left{
+    
+                font-size: 3rem;
+                font-weight: bold;
+                color: white;
+            }
+            .invite-link-holder{
+                @include mixin.center-flex-row();
+                justify-content: flex-end;
+                align-items:center;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                .arrow{
+                    filter: brightness(1) invert(1);
+                    margin-left: 1rem;
+                    max-width: 60px;
+                    max-height: 20px;
+                }
+            }
+        }
+    }
+    .bottom-modal.flower-image{
+        background: url('/assets/shared/mobile/bg-beta.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+
+        background-position: 50% center;
+    }
+}

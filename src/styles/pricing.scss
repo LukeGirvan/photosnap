@@ -1,0 +1,426 @@
+@use 'mixinstyles' as mixin;
+
+@keyframes slideLeft {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(100%);
+
+    }
+}
+
+@keyframes slideRight {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(100%);
+
+    }
+}
+
+
+.switch-holder{
+    width: 100%;
+    min-height: 200px;
+    @include mixin.center-flex-row();
+    align-items: center;
+    // justify-content: space-evenly;
+    gap: 2rem;
+    
+input[type="checkbox"] {
+    cursor: pointer;
+ 
+    position: relative;
+    background-color: #8e9396;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.7s ease;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    border-radius: 20px;
+    transform: scale(0.8);
+    transition: all 0.7s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  input[type="checkbox"]:checked::before {
+    background-color: #ffffff;
+    left: 82px;
+  }
+  input[type="checkbox"]:checked {
+    background-color: #000000;
+    
+  }
+  
+}
+  
+  @media (min-width:1200px) {
+    .show-prices{
+        width: 100%;
+        @include mixin.center-flex-row();
+        justify-content: space-between;
+        align-items: center;
+        gap:2rem;
+        justify-content: center;
+        .basic-plan,.pro-plan,.business-plan{
+            width: 20%;
+            min-height: 400px ;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10rem;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+            
+            .eighty-five-width{
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .details{
+                height: 85%;
+                @include mixin.center-flex-column();
+                align-items: center;
+                // justify-content: space-evenly;
+                gap:2.5rem;
+                h2{
+                    margin:0
+                }
+                .plan-description{
+                    text-align: center;
+                    margin:0;
+                }
+                .price{
+                    font-size: 2rem;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                .plan-selected{
+                    text-align: center;
+                }
+            }
+        }
+        .basic-plan.selected,.pro-plan.selected,.business-plan.selected{
+            position: relative;
+            width: 24%;
+            min-height: 480px ;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10rem;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            color: white;
+            .button2{
+                background-color: white;
+                color:black;
+            }
+            
+            .eighty-five-width{
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .details{
+                height: 85%;
+                @include mixin.center-flex-column();
+                align-items: center;
+                // justify-content: space-evenly;
+                gap:2.5rem;
+                h2{
+                    margin:0
+                }
+                .plan-description{
+                    text-align: center;
+                    margin:0;
+                }
+                .price{
+                    font-size: 2rem;
+                    font-weight: bold;
+                    margin: 0;
+                }
+            }
+        }
+        .basic-plan.selected::before,.pro-plan.selected::before,.business-plan.selected::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            background:  linear-gradient(to right,  rgb(255,197,147),rgb(188,113,152),rgb(90,119,255));
+            height:7px;
+            width: 100%;
+        }
+        .basic-plan:hover,.pro-plan:hover,.business-plan:hover {
+            background-color: #000000;
+            cursor: pointer;
+            transform: scale(1.05);
+            color: white;
+            .button2{
+                background-color: white;
+                color:black;
+            }
+        }
+        // .basic-plan:hover{
+        //     width: 30%;
+        //     min-height: 400px ;
+        //     background-color: rgb(0, 0, 0);
+        //     display: flex;
+        //     justify-content: center;
+        //     margin-bottom: 10rem;
+        //     .eighty-five-width{
+        //         width: 90%;
+        //         display: flex;
+        //         align-items: center;
+        //     }
+        //     .details{
+        //         width: 30%;
+        //         height: 85%;
+        //     }
+        // }
+    
+    }
+}
+
+@media (min-width:769px) and (max-width:1200px) {
+    .show-prices{
+        @include mixin.center-flex-column();
+        align-items: center;
+       
+
+        width: 100%;
+        .basic-plan,.pro-plan,.business-plan{
+            width: 90%;
+            min-height: 270px ;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10rem;
+            .eighty-five-width{
+                width: 90%;
+                display: flex;
+                align-items: center;
+            }
+            .details{
+                width: 100%;
+                height: 85%;
+                display: grid;
+                
+                h2{
+                    order:1;
+                }
+               .price-holder{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                order:2;
+                height: 100%;
+                margin-top: -3.5rem;
+                .price{
+                    width: fit-content;
+                        
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                        margin-bottom: 0;
+                        // text-align: right;
+                    }
+                    .plan-selected{
+                        width: fit-content;
+                        margin:0;
+                    }
+               }
+                .plan-description{
+                    order:3;
+                    width: 35%;
+                    margin-top: -4rem;
+                }
+                .button2{
+                    order:4;
+                    width: 35%;
+                }
+            }
+        }
+        .basic-plan.selected,.pro-plan.selected,.business-plan.selected{
+            position: relative;
+            width: 90%;
+            min-height: 270px ;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10rem;
+            .eighty-five-width{
+                width: 90%;
+                display: flex;
+                align-items: center;
+            }
+            .details{
+                width: 100%;
+                height: 85%;
+                display: grid;
+                color:white;
+                
+                h2{
+                    order:1;
+                }
+                .price-holder{
+                    width: 100%;
+                    order:2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    
+                }
+                
+                .plan-description{
+                    order:3;
+                    width: 35%;
+                    margin-top: -4rem;
+                }
+                .button2{
+                    order:4;
+                    width: 35%;
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+        .basic-plan.selected::before,.pro-plan.selected::before,.business-plan.selected::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            background:  linear-gradient(to right,  rgb(255,197,147),rgb(188,113,152),rgb(90,119,255));
+            height:7px;
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (max-width:769px) {
+    .show-prices{
+        @include mixin.center-flex-column();
+        align-items: center;
+       
+
+        width: 100%;
+        .basic-plan,.pro-plan,.business-plan{
+            width: 90%;
+            min-height: 400px ;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10rem;
+            .eighty-five-width{
+                width: 90%;
+                display: flex;
+                align-items: center;
+            }
+            .details{
+                width: 100%;
+                height: 85%;
+                display: grid;
+                gap:1rem;
+                h2{
+                    order:1;
+                    text-align: center;
+                    margin:0;
+                }
+               .price-holder{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                order:3;
+                height: 100%;
+                margin-bottom: 2rem;
+                // margin-top: -3.5rem;
+                .price{
+                    width: fit-content;
+                        
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                        margin-bottom: 0;
+                        margin:0;
+                    }
+                    .plan-selected{
+                        width: fit-content;
+                        margin:0;
+                    }
+               }
+                .plan-description{
+                    order:2;
+                    text-align: center;
+                    margin:0;
+                }
+                .button2{
+                    order:4;
+                    
+                }
+            }
+        }
+        .basic-plan.selected,.pro-plan.selected,.business-plan.selected{
+            width: 90%;
+            position: relative;
+            min-height: 400px ;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10rem;
+            .eighty-five-width{
+                width: 90%;
+                display: flex;
+                align-items: center;
+            }
+            .details{
+                width: 100%;
+                height: 85%;
+                display: grid;
+                color:white;
+                
+                h2{
+                    order:1;
+                }
+                .price-holder{
+                    width: 100%;
+                    order:3;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                }
+                
+                .plan-description{
+                    order:2;
+                    text-align: center;
+                }
+                .button2{
+                    order:4;
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+        .basic-plan.selected::before,.pro-plan.selected::before,.business-plan.selected::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            background:  linear-gradient(to right,  rgb(255,197,147),rgb(188,113,152),rgb(90,119,255));
+            height:7px;
+            width: 100%;
+        }
+    }
+}

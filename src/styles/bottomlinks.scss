@@ -1,0 +1,419 @@
+@use 'mixinstyles' as mixin;
+
+@media (min-width:1200px) {
+    .story-links,.story-links-2,.story-links-3,.story-links-4{
+        @include mixin.center-flex-row();
+        .about-story-1,.about-story-2,.about-story-3,.about-story-4,
+        .about-story-5,.about-story-6,.about-story-7,.about-story-8,
+        .about-story-9,.about-story-10,.about-story-11,.about-story-12,
+        .about-story-13,.about-story-14,.about-story-15,.about-story-16{
+            width: 25%;
+            height: 500px;
+            @include mixin.center-flex-column();
+            justify-content: flex-end;
+            align-items: center;
+            transition: transform 0.3s ease-in-out; // Add transition here
+
+            .details{
+                width: 80%;
+                color: white;
+                height: 40%;
+                .by-authour{
+                    position: relative;
+                    margin-bottom: 2rem;
+                }
+                .by-authour::after{
+                    position: absolute;
+                    content:'';
+                    bottom: -50%;
+                    border-bottom: 1px solid grey;
+                    width: 100%;
+                    left: 0;
+                }
+                .read-story-div{
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        letter-spacing: 7px;
+                        font-weight: bold;
+                        font-size: .9rem;
+                        
+                    }
+                    img{
+                        filter: brightness(1) invert(1);
+                    }
+                }
+                
+            }
+            &:hover{
+                transform: translateY(-5%);
+                cursor: pointer;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    background:  linear-gradient(to right,  rgb(255,197,147),rgb(188,113,152),rgb(90,119,255));
+                    height:7px;
+                    width: 100%;
+                }
+            }
+
+        }
+        .about-story-1{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/desktop/mountains.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-2{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/cityscapes.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-3{
+            background:url('/assets/stories/desktop/18-days-voyage.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-4{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/architecturals.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-5{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/desktop/world-tour.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-6{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/unforeseen-corners.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-7{
+            background:url('/assets/stories/desktop/king-on-africa.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-8{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/trip-to-nowhere.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-9{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/desktop/rage-of-the-sea.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-10{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/running-free.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-11{
+            background:url('/assets/stories/desktop/behind-the-waves.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-12{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/calm-waters.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-13{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/desktop/milky-way.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-14{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/dark-forest.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-15{
+            background:url('/assets/stories/desktop/somwarpet.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-16{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/land-of-dreams.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+
+@media (min-width:769px)and (max-width:1200px) {
+    .story-links,.story-links-2,.story-links-3,.story-links-4{
+        @include mixin.center-flex-row();
+        flex-wrap: wrap;
+        .about-story-1,.about-story-2,.about-story-3,.about-story-4,
+        .about-story-5,.about-story-6,.about-story-7,.about-story-8,
+        .about-story-9,.about-story-10,.about-story-11,.about-story-12,
+        .about-story-13,.about-story-14,.about-story-15,.about-story-16{
+            width: 50%;
+            height: 500px;
+            @include mixin.center-flex-column();
+            justify-content: flex-end;
+            align-items: center;
+            transition: transform 0.3s ease-in-out; 
+
+            .details{
+                width: 80%;
+                color: white;
+                height: 40%;
+                .by-authour{
+                    position: relative;
+                    margin-bottom: 2rem;
+                }
+                .by-authour::after{
+                    position: absolute;
+                    content:'';
+                    bottom: -50%;
+                    border-bottom: 1px solid grey;
+                    width: 100%;
+                    left: 0;
+                }
+                .read-story-div{
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        letter-spacing: 7px;
+                        font-weight: bold;
+                        font-size: .9rem;
+                        
+                    }
+                    img{
+                        filter: brightness(1) invert(1);
+                    }
+                }
+                
+            }
+            
+           
+        }
+        .about-story-1{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/mobile/mountains.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-2{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/cityscapes.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-3{
+            background:url('/assets/stories/mobile/18-days-voyage.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-4{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/architecturals.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-5{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/mobile/world-tour.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-6{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/unforeseen-corners.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-7{
+            background:url('/assets/stories/mobile/king-on-africa.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-8{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/trip-to-nowhere.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-9{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/mobile/rage-of-the-sea.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-10{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/running-free.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-11{
+            background:url('/assets/stories/mobile/behind-the-waves.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-12{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/calm-waters.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-13{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/mobile/milky-way.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-14{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/dark-forest.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-15{
+            background:url('/assets/stories/mobile/somwarpet.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-16{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/land-of-dreams.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+//mobile
+@media (max-width:769px)  {
+    .story-links,.story-links-2,.story-links-3,.story-links-4{
+        @include mixin.center-flex-row();
+        flex-wrap: wrap;
+        .about-story-1,.about-story-2,.about-story-3,.about-story-4,
+        .about-story-5,.about-story-6,.about-story-7,.about-story-8,
+        .about-story-9,.about-story-10,.about-story-11,.about-story-12,
+        .about-story-13,.about-story-14,.about-story-15,.about-story-16{
+            width: 100%;
+            height: 500px;
+            @include mixin.center-flex-column();
+            justify-content: flex-end;
+            align-items: center;
+           
+            .details{
+                width: 80%;
+                color: white;
+                height: 40%;
+                .by-authour{
+                    position: relative;
+                    margin-bottom: 2rem;
+                }
+                .by-authour::after{
+                    position: absolute;
+                    content:'';
+                    bottom: -50%;
+                    border-bottom: 1px solid grey;
+                    width: 100%;
+                    left: 0;
+                }
+                .read-story-div{
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        letter-spacing: 7px;
+                        font-weight: bold;
+                        font-size: .9rem;
+                        
+                    }
+                    img{
+                        filter: brightness(1) invert(1);
+                    }
+                }
+                
+            }
+            
+
+        }
+        .about-story-1{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/desktop/mountains.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-2{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/cityscapes.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-3{
+            background:url('/assets/stories/desktop/18-days-voyage.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-4{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/desktop/architecturals.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-5{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/mobile/world-tour.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-6{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/unforeseen-corners.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-7{
+            background:url('/assets/stories/mobile/king-on-africa.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-8{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/trip-to-nowhere.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-9{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/mobile/rage-of-the-sea.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-10{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/running-free.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-11{
+            background:url('/assets/stories/mobile/behind-the-waves.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-12{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/calm-waters.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-13{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/stories/mobile/milky-way.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .about-story-14{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/dark-forest.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-15{
+            background:url('/assets/stories/mobile/somwarpet.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .about-story-16{
+            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),url('/assets/stories/mobile/land-of-dreams.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}

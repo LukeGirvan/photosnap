@@ -1,0 +1,371 @@
+@use 'mixinstyles' as mixin;
+
+body{
+    padding: 0;
+    margin:0;
+}
+
+@font-face {
+    font-family: 'DMSans';
+    src: url('/assets/fonts/DM_Sans/DMSans.ttf');
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'DMSans';
+  }
+  
+
+@media (min-width:1200px) {
+    .hero-section{
+        @include mixin.center-flex-row();
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        height: 650px;
+        .text-side {
+            width: 50%;
+            @include mixin.center-flex-column();
+            align-items: center;
+            .details{
+                width: 70%;
+                .title{
+                    font-size: 3rem;
+                    letter-spacing: 5px;
+                    // max-width: 80%;
+                    // text-align: center;
+                }
+                .description{
+                    
+                    line-height: 2;
+                    font-size: 1.2rem;
+                    color: grey;
+                }
+            }
+        }
+        .text-side:not(.black){
+            a{
+                color: black;
+                text-decoration: none;
+                
+            }
+            .arrow{
+                margin-left: 1rem;
+            }
+        }
+        .text-side.black{
+            background-color: black;
+            color: white;
+            a{
+                color: white;
+                text-decoration: none;
+                margin-left: 1rem;
+            }
+            img{
+                filter: brightness(1) invert(1);
+                margin-left: 1rem;
+            }
+        }
+        .image-side{
+            width: 60%;
+            position: relative;
+            
+            
+        }
+        .image-side.create-and-share{
+            background: url('/assets/home/desktop/create-and-share.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .text-side.create-and-share::before,.text-side.pricing-jpg::before,.text-side.hero-jpg::before{
+            content: "";
+            position: absolute;
+            top: 35%;
+            background:  linear-gradient(to top,  rgb(255,197,147),rgb(188,113,152),rgb(90,119,255));
+            height:30%;
+            left:0;
+            width: 7px;
+        }
+        .image-side.beautiful-stories{
+            background: url('/assets/home/desktop/beautiful-stories.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.designed-for-everyone{
+            background: url('/assets/home/desktop/designed-for-everyone.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.hero-jpg{
+            background: url('/assets/features/desktop/hero.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.pricing-jpg{
+            background: url('/assets/pricing/desktop/hero.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    .hero-section.hide-link{
+        
+            
+        
+               
+                .details{
+                    a{
+                        display: none;
+                    }
+                    
+                }
+            
+        
+    }
+    .hero-section.reverse{
+        @include mixin.center-flex-row-reverse();
+
+    }
+}
+
+
+@media (min-width:769px)and (max-width:1200px) {
+    .hero-section{
+        @include mixin.center-flex-row();
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        height: 650px;
+        .text-side {
+            width: 70%;
+            @include mixin.center-flex-column();
+            align-items: center;
+            .details{
+                width: 70%;
+                .title{
+                    font-size: 3rem;
+                    letter-spacing: 5px;
+                    // max-width: 80%;
+                    // text-align: center;
+                }
+                .description{
+                    
+                    line-height: 2;
+                    font-size: 1.2rem;
+                    color: grey;
+                }
+                .arrow{
+                    margin-left: 1rem;
+                }
+            }
+        }
+        .text-side.create-and-share::before,.text-side.pricing-jpg::before,.text-side.hero-jpg::before{
+            content: "";
+            position: absolute;
+            top: 35%;
+            background:  linear-gradient(to top,  rgb(255,197,147),rgb(188,113,152),rgb(90,119,255));
+            height:30%;
+            left:0;
+            width: 7px;
+        }
+        .text-side:not(.black){
+            a{
+                color: black;
+                text-decoration: none;
+            }
+        }
+        .text-side.black{
+            background-color: black;
+            color: white;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            img{
+                filter: brightness(1) invert(1);
+                margin-left: 1rem;
+            }
+        }
+        .image-side{
+            width: 40%;
+            position: relative;
+            
+            
+        }
+        .image-side.create-and-share{
+            background: url('/assets/home/tablet/create-and-share.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.beautiful-stories{
+            background: url('/assets/home/tablet/beautiful-stories.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.designed-for-everyone{
+            background: url('/assets/home/tablet/designed-for-everyone.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.hero-jpg{
+            background: url('/assets/features/tablet/hero.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.pricing-jpg{
+            background: url('/assets/pricing/tablet/hero.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    .hero-section.hide-link{
+        
+            
+        
+               
+        .details{
+            a{
+                display: none;
+            }
+            
+        }
+    
+
+}
+    .hero-section.reverse{
+        @include mixin.center-flex-row-reverse();
+
+    }
+}
+//mobile
+@media (max-width:769px)  {
+    .hero-section{
+        @include mixin.center-flex-column-reverse();
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        min-height: 650px;
+        .text-side {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            min-height: 350px;
+            @include mixin.center-flex-column();
+            align-items: center;
+            .details{
+                box-sizing: border-box;
+                width: 90%;
+                padding: 3rem 1rem;
+                .title{
+                    font-size: 1.8rem;
+                    letter-spacing: 5px;
+                    // max-width: 80%;
+                    // text-align: center;
+                }
+                .description{
+                    
+                    line-height: 1.5;
+                    font-size: 1rem;
+                    color: grey;
+                }
+            }
+        }
+        .text-side.create-and-share::before,.text-side.pricing-jpg::before,.text-side.hero-jpg::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            background:  linear-gradient(to right,  rgb(255,197,147),rgb(188,113,152),rgb(90,119,255));
+            height:7px;
+            left:7%;
+            width: 30%;
+        }
+        .text-side:not(.black){
+            a{
+                color: black;
+                text-decoration: none;
+            }
+            .arrow{
+                margin-left: 1rem;
+            }
+        }
+        .text-side.black{
+            background-color: black;
+            color: white;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            .arrow{
+                filter: brightness(1) invert(1);
+                margin-left: 1rem;
+            }
+        }
+        .image-side{
+            width: 100%;
+            height: 50%;
+            position: relative;
+            min-height: 300px;
+            
+        }
+        .image-side.create-and-share{
+            background: url('/assets/home/mobile/create-and-share.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.beautiful-stories{
+            background: url('/assets/home/mobile/beautiful-stories.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.designed-for-everyone{
+            background: url('/assets/home/mobile/designed-for-everyone.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.hero-jpg{
+            background: url('/assets/features/mobile/hero.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .image-side.pricing-jpg{
+            background: url('/assets/pricing/mobile/hero.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    .hero-section.hide-link{
+        
+            
+        
+               
+        .details{
+            a{
+                display: none;
+            }
+            
+        }
+    
+
+}
+    // .hero-section.reverse{
+    //     @include mixin.center-flex-column();
+
+    // }
+}
